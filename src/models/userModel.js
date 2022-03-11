@@ -11,8 +11,10 @@ const UserModel = sequelize.define('User', {
 	},
 	username: {
         type:DataTypes.STRING,
-        len: [5,16],
-        unique:true
+        unique:true,
+        validate:{
+            len: [5,16]
+        }
     },
     password:{
         type:DataTypes.STRING(300),
