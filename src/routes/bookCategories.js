@@ -6,6 +6,8 @@ const router = express.Router()
 
 router.post("/",chekToken,bookCategories.ADD_CATEGORY)
 router.get("/",bookCategories.GET)
+router.delete("/:category_id",chekToken,bookCategories.DELETE)
+
 
 export default {
     router

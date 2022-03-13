@@ -18,6 +18,7 @@ const UserModel = sequelize.define('User', {
     },
     password:{
         type:DataTypes.STRING(300),
+        msg:"Password is invalid"
     },
     age:{
         type:DataTypes.INTEGER,
@@ -40,5 +41,6 @@ const UserModel = sequelize.define('User', {
 UserModel.sync()
 
 // { force: true }
+// { alter: true }
 
 export default UserModel
